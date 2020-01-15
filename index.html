@@ -3,7 +3,7 @@
 <html>
 
 <head>
-    <title>Example 08.09 - Load stl model </title>
+    <title>Isaura</title>
     <script type="text/javascript" src="three.js"></script>
     <script type="text/javascript" src="STLLoader.js"></script>
 
@@ -73,7 +73,7 @@
         var group;
         var gui = new dat.GUI();
 
-
+        var controls = new THREE.OrbitControls( camera, webGLRenderer.domElement );
         // model from http://www.thingiverse.com/thing:69709
         var loader = new THREE.STLLoader();
         var group = new THREE.Object3D();
@@ -82,7 +82,7 @@
             var mat = new THREE.MeshLambertMaterial({color: 0x7777ff});
             group = new THREE.Mesh(geometry, mat);
             scene.add(group);
-            var controls = new THREE.OrbitControls( camera, renderer.domElement );
+            
         });
 
 
