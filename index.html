@@ -81,9 +81,8 @@
             console.log(geometry);
             var mat = new THREE.MeshLambertMaterial({color: 0x7777ff});
             group = new THREE.Mesh(geometry, mat);
-            group.rotation.x = -0.5 * Math.PI;
-            group.scale.set(0.6, 0.6, 0.6);
             scene.add(group);
+            var controls = new THREE.OrbitControls( camera, renderer.domElement );
         });
 
 
@@ -92,6 +91,7 @@
 
         function render() {
             stats.update();
+            controls.update();
 
             if (group) {
                 group.rotation.z += 0.006;
