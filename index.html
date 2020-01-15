@@ -31,7 +31,7 @@
     // once everything is loaded, we run our Three.js stuff.
     function init() {
 
-
+    
         // create a scene, that will hold all our elements such as objects, cameras and lights.
         var scene = new THREE.Scene();
 
@@ -90,7 +90,6 @@
 
 
         function render() {
-            
 
             if (group) {
                 group.rotation.z += 0.006;
@@ -102,7 +101,8 @@
             webGLRenderer.render(scene, camera);
         }
 
-       
+        }
+          }
     window.onload = init;
 </script>
 </body>
